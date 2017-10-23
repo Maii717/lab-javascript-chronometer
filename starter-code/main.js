@@ -1,9 +1,22 @@
-// Start/Stop Button
+var cronometer = new Cronometer ();
+
+
+/// Start/Stop Button
 document.getElementById("btnLeft").addEventListener("click", function () {
-  console.log("Left button clicked");
+  if(btnLeft.className == "btn start") {
+    Cronometer.startClick();
+  } else {
+    Cronometer.stopClick();
+  }
 });
 
 // Reset/Split Button
+
 document.getElementById("btnRight").addEventListener("click", function () {
-  console.log("Right button clicked");
+
+  if(btnRight.className === "btn split") {
+    Cronometer.splitTime();
+  } else {
+    Cronometer.resetTime();
+  }
 });
