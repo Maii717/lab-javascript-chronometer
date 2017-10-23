@@ -95,7 +95,7 @@ Cronometer.prototype.resetTime = function() {
   secCen.innerHTML = 0;
 
   while(document.getElementById("split").firstChild) {
-    document.getElementById("split").removeChild(splitList.firstChild);
+    document.getElementById("split").removeChild(  document.getElementById("split").firstChild);
   }
 
   this.minutes = 0;
